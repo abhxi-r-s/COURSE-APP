@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddcourseComponent implements OnInit {
 
+  course={courseTitle:"",
+  courseDescription:"",
+  courseDate:"",
+  courseVenue:"",
+  courseDuration:""
+
+
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+  Addcourse()
+  {
+    console.log(this.course);
+    alert("Success");
   }
 
 }
