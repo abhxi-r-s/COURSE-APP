@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ApiService } from '../api.service';
 @Component({
   selector: 'app-addcourse',
   templateUrl: './addcourse.component.html',
@@ -16,14 +16,19 @@ export class AddcourseComponent implements OnInit {
 
   }
 
-  constructor() { }
+  constructor( private newservice:ApiService) { }
 
   ngOnInit(): void {
   }
   Addcourse()
   {
-    console.log(this.course);
-    alert("Success");
+    this.newservice.addcourse(this.course).subscribe((data)=>{
+    
+    
+    }) 
+    alert("success");
+ 
+    
   }
 
 }

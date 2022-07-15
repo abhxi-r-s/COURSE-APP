@@ -10,6 +10,6 @@ export class ApiService {
 
   addcourse(course:any){
 
-    return this.http.post("https://mylinkurcodesapp.herokuapp.com/addcourses",course)
+    return this.http.post<any>("https://mylinkurcodesapp.herokuapp.com/addcourse",course)
   }
 }
